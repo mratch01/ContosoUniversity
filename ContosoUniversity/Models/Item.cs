@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace ContosoUniversity.Models
 {
-    public class Student
+    public class Item
     {
         public int ID { get; set; }
-        public string LastName { get; set; }
-        public string FirstMidName { get; set; }
-        public DateTime EnrollmentDate { get; set; }
+        public string ItemDept { get; set; }
+        public string ItemDescription { get; set; }
+        public DateTime ItemPrice { get; set; }
 
         public ICollection<Enrollment> Enrollments { get; set; }
     }

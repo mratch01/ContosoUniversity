@@ -10,26 +10,26 @@ namespace ContosoUniversity.Data
         {
             context.Database.EnsureCreated();
 
-            // Look for any students.
-            if (context.Students.Any())
+            // Look for any Items.
+            if (context.Items.Any())
             {
-                return;   // DB has been seeded
+                return;   // DB has been seeded. Adding items that are in inventory and for sale.
             }
 
-            var students = new Student[]
+            var Items = new Item[]
             {
-            new Student{FirstMidName="Carson",LastName="Alexander",EnrollmentDate=DateTime.Parse("2005-09-01")},
-            new Student{FirstMidName="Meredith",LastName="Alonso",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="Arturo",LastName="Anand",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            new Student{FirstMidName="Gytis",LastName="Barzdukas",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="Yan",LastName="Li",EnrollmentDate=DateTime.Parse("2002-09-01")},
-            new Student{FirstMidName="Peggy",LastName="Justice",EnrollmentDate=DateTime.Parse("2001-09-01")},
-            new Student{FirstMidName="Laura",LastName="Norman",EnrollmentDate=DateTime.Parse("2003-09-01")},
-            new Student{FirstMidName="Nino",LastName="Olivetto",EnrollmentDate=DateTime.Parse("2005-09-01")}
+            new Item{ItemDescription="Red folding chair",ItemDept="Furniture",ItemPrice=DateTime.Parse("2002-05-01")},
+            new Item{ItemDescription="Chocolate Ice Cream",ItemDept="Perishables",ItemPrice=DateTime.Parse("2002-09-01")},
+            new Item{ItemDescription="Grass Seed",ItemDept="Lawn and Garden",ItemPrice=DateTime.Parse("2003-09-01")},
+            new Item{ItemDescription="Chocolate Chip Waffles",ItemDept="Perishables",ItemPrice=DateTime.Parse("2002-09-01")},
+            new Item{ItemDescription="Blue Fountain Pen",ItemDept="Office Supplies",ItemPrice=DateTime.Parse("2002-09-01")},
+            new Item{ItemDescription="Paper Clips(Pack of 50)",ItemDept="Office Supplies",ItemPrice=DateTime.Parse("2001-09-01")},
+            new Item{ItemDescription="Roofing Hammer",ItemDept="Home Imporvement",ItemPrice=DateTime.Parse("2003-09-01")},
+            new Item{ItemDescription="Computer Desk",ItemDept="Furniture",ItemPrice=DateTime.Parse("2005-09-01")}
             };
-            foreach (Student s in students)
+            foreach (Item s in Items)
             {
-                context.Students.Add(s);
+                context.Items.Add(s);
             }
             context.SaveChanges();
 
@@ -51,18 +51,18 @@ namespace ContosoUniversity.Data
 
             var enrollments = new Enrollment[]
             {
-            new Enrollment{StudentID=1,CourseID=1050,Grade=Grade.A},
-            new Enrollment{StudentID=1,CourseID=4022,Grade=Grade.C},
-            new Enrollment{StudentID=1,CourseID=4041,Grade=Grade.B},
-            new Enrollment{StudentID=2,CourseID=1045,Grade=Grade.B},
-            new Enrollment{StudentID=2,CourseID=3141,Grade=Grade.F},
-            new Enrollment{StudentID=2,CourseID=2021,Grade=Grade.F},
-            new Enrollment{StudentID=3,CourseID=1050},
-            new Enrollment{StudentID=4,CourseID=1050},
-            new Enrollment{StudentID=4,CourseID=4022,Grade=Grade.F},
-            new Enrollment{StudentID=5,CourseID=4041,Grade=Grade.C},
-            new Enrollment{StudentID=6,CourseID=1045},
-            new Enrollment{StudentID=7,CourseID=3141,Grade=Grade.A},
+            new Enrollment{ItemID=1,CourseID=1050,Grade=Grade.A},
+            new Enrollment{ItemID=1,CourseID=4022,Grade=Grade.C},
+            new Enrollment{ItemID=1,CourseID=4041,Grade=Grade.B},
+            new Enrollment{ItemID=2,CourseID=1045,Grade=Grade.B},
+            new Enrollment{ItemID=2,CourseID=3141,Grade=Grade.F},
+            new Enrollment{ItemID=2,CourseID=2021,Grade=Grade.F},
+            new Enrollment{ItemID=3,CourseID=1050},
+            new Enrollment{ItemID=4,CourseID=1050},
+            new Enrollment{ItemID=4,CourseID=4022,Grade=Grade.F},
+            new Enrollment{ItemID=5,CourseID=4041,Grade=Grade.C},
+            new Enrollment{ItemID=6,CourseID=1045},
+            new Enrollment{ItemID=7,CourseID=3141,Grade=Grade.A},
             };
             foreach (Enrollment e in enrollments)
             {

@@ -427,8 +427,8 @@ $.extend( $.validator, {
 			$( this.currentForm )
 				.on( "focusin.validate focusout.validate keyup.validate",
 					":text, [type='password'], [type='file'], select, textarea, [type='number'], [type='search'], " +
-					"[type='tel'], [type='url'], [type='email'], [type='datetime'], [type='date'], [type='month'], " +
-					"[type='week'], [type='time'], [type='datetime-local'], [type='range'], [type='color'], " +
+					"[type='tel'], [type='url'], [type='email'], [type='DateTime'], [type='date'], [type='month'], " +
+					"[type='week'], [type='time'], [type='DateTime-local'], [type='range'], [type='color'], " +
 					"[type='radio'], [type='checkbox'], [contenteditable], [type='button']", delegate )
 
 				// Support: Chrome, oldIE
@@ -1454,31 +1454,31 @@ $.extend( $.validator, {
 				supportedTypes = [ "text", "number", "range" ],
 				re = new RegExp( "\\b" + type + "\\b" ),
 				notSupported = type && !re.test( supportedTypes.join() ),
-				decimalPlaces = function( num ) {
+				DateTimePlaces = function( num ) {
 					var match = ( "" + num ).match( /(?:\.(\d+))?$/ );
 					if ( !match ) {
 						return 0;
 					}
 
-					// Number of digits right of decimal point.
+					// Number of digits right of DateTime point.
 					return match[ 1 ] ? match[ 1 ].length : 0;
 				},
 				toInt = function( num ) {
-					return Math.round( num * Math.pow( 10, decimals ) );
+					return Math.round( num * Math.pow( 10, DateTimes ) );
 				},
 				valid = true,
-				decimals;
+				DateTimes;
 
 			// Works only for text, number and range input types
-			// TODO find a way to support input types date, datetime, datetime-local, month, time and week
+			// TODO find a way to support input types date, DateTime, DateTime-local, month, time and week
 			if ( notSupported ) {
 				throw new Error( errorMessage );
 			}
 
-			decimals = decimalPlaces( param );
+			DateTimes = DateTimePlaces( param );
 
-			// Value can't have too many decimals
-			if ( decimalPlaces( value ) > decimals || toInt( value ) % toInt( param ) !== 0 ) {
+			// Value can't have too many DateTimes
+			if ( DateTimePlaces( value ) > DateTimes || toInt( value ) % toInt( param ) !== 0 ) {
 				valid = false;
 			}
 

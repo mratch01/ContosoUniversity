@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ContosoUniversity.Models.Student>
+﻿@model IEnumerable<ContosoUniversity.Models.Item>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,13 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.LastName)
+                @Html.DisplayNameFor(model => model.ItemDept)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FirstMidName)
+                @Html.DisplayNameFor(model => model.ItemDescription)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EnrollmentDate)
+                @Html.DisplayNameFor(model => model.ItemPrice)
             </th>
             <th></th>
         </tr>
@@ -28,13 +28,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.LastName)
+                @Html.DisplayFor(modelItem => item.ItemDept)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FirstMidName)
+                @Html.DisplayFor(modelItem => item.ItemDescription)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                @Html.DisplayFor(modelItem => item.ItemPrice)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |

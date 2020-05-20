@@ -17,7 +17,7 @@ namespace ContosoUniversity.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "The Store allows you to put in items for sale.";
 
             return View();
         }
