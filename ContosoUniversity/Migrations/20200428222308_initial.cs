@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ContosoUniversity.Migrations
+namespace TheStore.Migrations
 {
     public partial class initial : Migration
     {
@@ -29,7 +29,7 @@ namespace ContosoUniversity.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ItemDept = table.Column<string>(nullable: true),
                     ItemDescription = table.Column<string>(nullable: true),
-                    ItemPrice = table.Column<DateTime>(nullable: false)
+                    ItemPrice = table.Column<Decimal>(nullable: false)
                 },
                 constraints: table =>
                 {

@@ -1,4 +1,4 @@
-﻿namespace ContosoUniversity.Models
+﻿namespace TheStore.Models
 {
     public enum Grade
     {

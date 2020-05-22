@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ContosoUniversity.Data;
-using ContosoUniversity.Models;
+using TheStore.Data;
+using TheStore.Models;
 
-namespace ContosoUniversity.Controllers
+namespace TheStore.Controllers
 {
     public class ItemsController : Controller
     {

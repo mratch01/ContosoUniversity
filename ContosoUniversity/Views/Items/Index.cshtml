@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ContosoUniversity.Models.Item>
+﻿@model IEnumerable<TheStore.Models.Item>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ItemDept)
+                @Html.DisplayNameFor(model => model.ItemDescription)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ItemDescription)
+                @Html.DisplayNameFor(model => model.ItemDept)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ItemPrice)
@@ -25,13 +25,13 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model) {//create table with items department, Description and price
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ItemDept)
+                @Html.DisplayFor(modelItem => item.ItemDescription)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ItemDescription)
+                @Html.DisplayFor(modelItem => item.ItemDept)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ItemPrice)

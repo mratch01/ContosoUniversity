@@ -1,8 +1,8 @@
-﻿using ContosoUniversity.Models;
+﻿using TheStore.Models;
 using System;
 using System.Linq;
 
-namespace ContosoUniversity.Data
+namespace TheStore.Data
 {
     public static class DbInitializer
     {
@@ -18,14 +18,14 @@ namespace ContosoUniversity.Data
 
             var Items = new Item[]
             {
-            new Item{ItemDescription="Red folding chair",ItemDept="Furniture",ItemPrice=DateTime.Parse("2002-05-01")},
-            new Item{ItemDescription="Chocolate Ice Cream",ItemDept="Perishables",ItemPrice=DateTime.Parse("2002-09-01")},
-            new Item{ItemDescription="Grass Seed",ItemDept="Lawn and Garden",ItemPrice=DateTime.Parse("2003-09-01")},
-            new Item{ItemDescription="Chocolate Chip Waffles",ItemDept="Perishables",ItemPrice=DateTime.Parse("2002-09-01")},
-            new Item{ItemDescription="Blue Fountain Pen",ItemDept="Office Supplies",ItemPrice=DateTime.Parse("2002-09-01")},
-            new Item{ItemDescription="Paper Clips(Pack of 50)",ItemDept="Office Supplies",ItemPrice=DateTime.Parse("2001-09-01")},
-            new Item{ItemDescription="Roofing Hammer",ItemDept="Home Imporvement",ItemPrice=DateTime.Parse("2003-09-01")},
-            new Item{ItemDescription="Computer Desk",ItemDept="Furniture",ItemPrice=DateTime.Parse("2005-09-01")}
+            new Item{ItemDescription="Red Folding Chair",ItemDept="Furniture",ItemPrice=Decimal.Parse("14.99")},
+            new Item{ItemDescription="Chocolate Ice Cream",ItemDept="Perishables",ItemPrice=Decimal.Parse("2.99")},
+            new Item{ItemDescription="Grass Seed",ItemDept="Lawn and Garden",ItemPrice=Decimal.Parse("15.00")},
+            new Item{ItemDescription="Chocolate Chip Waffles",ItemDept="Perishables",ItemPrice=Decimal.Parse("5.00")},
+            new Item{ItemDescription="Blue Fountain Pen",ItemDept="Office Supplies",ItemPrice=Decimal.Parse("1.99")},
+            new Item{ItemDescription="Paper Clips(Pack of 50)",ItemDept="Office Supplies",ItemPrice=Decimal.Parse("0.99")},
+            new Item{ItemDescription="Roofing Hammer",ItemDept="Home Imporvement",ItemPrice=Decimal.Parse("8.99")},
+            new Item{ItemDescription="Computer Desk",ItemDept="Furniture",ItemPrice=Decimal.Parse("145.99")}
             };
             foreach (Item s in Items)
             {

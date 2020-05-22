@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
-using ContosoUniversity.Data;
+using TheStore.Data;
 
-namespace ContosoUniversity
+namespace TheStore
 {
     public class Program
     {

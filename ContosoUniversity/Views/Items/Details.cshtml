@@ -1,4 +1,4 @@
-﻿@model ContosoUniversity.Models.Item
+﻿@model TheStore.Models.Item
 
 @{
     ViewData["Title"] = "Details";
@@ -11,16 +11,16 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ItemDept)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ItemDept)
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.ItemDescription)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.ItemDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemDept)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ItemDept)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.ItemPrice)
