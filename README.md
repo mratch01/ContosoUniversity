@@ -24,5 +24,4 @@ Description of each item
 		Will be able to add/delete items
 		Calculator – will be able to add up the total
     
-    
-    ** Was not able to get the Total function to work.
+ 
